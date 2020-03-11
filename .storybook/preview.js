@@ -1,4 +1,9 @@
-import { addParameters } from '@storybook/react';
+import {
+  addParameters
+} from '@storybook/react';
+import {
+  setConsoleOptions
+} from '@storybook/addon-console';
 
 addParameters({
   options: {
@@ -8,4 +13,8 @@ addParameters({
      */
     showRoots: false,
   },
+});
+
+setConsoleOptions({
+  panelExclude: [],
 });
