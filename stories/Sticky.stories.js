@@ -1,10 +1,12 @@
 import React from 'react';
 import { action } from '@storybook/addon-actions';
 import Sticky from './../components/Sticky'
+import Layout from './../components/Layout'
 
 export default {
   title: 'Sticky',
   component: Sticky,
+  decorators: [storyFn => <Layout>{storyFn()}</Layout>]
 };
 
 export const Text = () => {

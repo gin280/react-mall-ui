@@ -1,4 +1,4 @@
-import styles from "./index.module.css";
+import styles from "./index.module.scss";
 import PropTypes from "prop-types";
 import React, { useState, useEffect, useRef } from "react";
 
@@ -27,7 +27,7 @@ const Sticky = props => {
   return (
     <div>
       <div ref={ref}>
-        <div className={isFixed ? "douStickFixed" : null}>
+        <div className={isFixed ? styles.douStickFixed : null}>
           {props.children[0]}
         </div>
       </div>
