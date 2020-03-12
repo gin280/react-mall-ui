@@ -31,6 +31,17 @@ module.exports = async ({
         ],
     });
 
+    config.module.rules.push({
+        test: /\.(js|jsx)$/,
+        exclude: /node_modules/,
+        use: [{
+            loader: require.resolve('babel-loader'),
+            options: {
+                plugins: [require.resolve('babel-plugin-emotion')],
+            },
+        }],
+    });
+
     // Return the altered config
     return config;
 };
