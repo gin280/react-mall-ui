@@ -6,7 +6,6 @@ import Layout from './../components/Layout'
 export default {
   title: 'Sticky',
   component: Sticky,
-  decorators: [storyFn => <Layout>{storyFn()}</Layout>]
 };
 
 export const Text = () => {

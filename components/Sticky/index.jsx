@@ -1,28 +1,28 @@
-import styles from "./index.module.scss";
-import PropTypes from "prop-types";
-import React, { useState, useEffect, useRef } from "react";
+import styles from './index.module.scss'
+import PropTypes from 'prop-types'
+import React, { useState, useEffect, useRef } from 'react'
 
 const Sticky = props => {
-  console.info(props);
-  const [isFixed, setIsFixed] = useState(false);
-  const ref = useRef(0);
+  console.info(props)
+  const [isFixed, setIsFixed] = useState(false)
+  const ref = useRef(0)
   useEffect(() => {
     const handleScroll = () => {
       setTimeout(() => {
-        console.info(ref.current.getBoundingClientRect().top);
-        let offsetTop = ref.current.getBoundingClientRect().top;
+        console.info(ref.current.getBoundingClientRect().top)
+        let offsetTop = ref.current.getBoundingClientRect().top
         if (offsetTop < 0) {
-          setIsFixed(true);
+          setIsFixed(true)
         } else {
-          setIsFixed(false);
+          setIsFixed(false)
         }
-      }, 0);
-    };
-    window.addEventListener("scroll", handleScroll, false);
+      }, 0)
+    }
+    window.addEventListener('scroll', handleScroll, false)
     return () => {
-      window.removeEventListener("scroll", handleScroll);
-    };
-  }, [isFixed]);
+      window.removeEventListener('scroll', handleScroll)
+    }
+  }, [isFixed])
 
   return (
     <div>
@@ -33,10 +33,10 @@ const Sticky = props => {
       </div>
       <div>{props.children[1]}</div>
     </div>
-  );
-};
+  )
+}
 
-export default Sticky;
+export default Sticky
 
 // Sticky.propTypes = {
 //   scrollTop: PropTypes.number,

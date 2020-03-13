@@ -1,9 +1,6 @@
-import {
-  addParameters
-} from '@storybook/react';
-import {
-  setConsoleOptions
-} from '@storybook/addon-console';
+import { addParameters, addDecorator } from '@storybook/react';
+import { setConsoleOptions } from '@storybook/addon-console';
+import Layout from './../components/Layout'
 
 addParameters({
   options: {
@@ -18,3 +15,5 @@ addParameters({
 setConsoleOptions({
   panelExclude: [],
 });
+
+addDecorator(storyFn => <Layout>{storyFn()}</Layout>);
