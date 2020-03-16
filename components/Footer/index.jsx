@@ -1,4 +1,4 @@
-import React from 'react'
+import React, {useState} from 'react'
 import PropTypes from 'prop-types'
 import { jsx, css } from '@emotion/core'
 import styled from '@emotion/styled'
@@ -65,7 +65,8 @@ const DouFooterCopyright = styled.div(
 )
 
 const Footer = props => {
-  console.info(props, 'jojo')
+  const [state, setState] = useState(0)
+  console.info(state, 'jojo')
   return (
     <DouFooter fixed={props.fixed} bgcolor={props.bgcolor}>
       {props.navigate.length > 0 && (
