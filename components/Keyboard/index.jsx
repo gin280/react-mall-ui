@@ -114,15 +114,6 @@ const Grid = styled.div({
   },
 })
 
-// .tui-fontsize-32 {
-//     font-size: 32upx;
-//     color: #333 !important;
-// }
-
-// .tui-bg-gray {
-//     background: #e7e6eb !important;
-// }
-
 const Keyboard = props => {
   const getKeyBoard = (index, action) => {
     let content = index + 1
